@@ -1,14 +1,85 @@
 import React from 'react';
 import styled from "styled-components";
+import {VscLibrary} from 'react-icons/vsc'
+import {TbSquarePlus} from 'react-icons/tb'
+import {BiHeartSquare} from 'react-icons/bi'
+import {MdHomeFilled, MdSearch} from 'react-icons/md'
+import Playlists from './Playlists';
 
 export default function SideBar(){
 	return (
 		<Container>
-			SideBar
+			<div className="top__links">
+				<div className="logo">
+					<img 
+					src='https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_White.png' 
+					alt='Logo Spotify' 
+					/>
+				</div>
+				<ul>
+					<li>
+						<MdHomeFilled  size={28}/>
+						<span>Accueil</span>
+						</li>
+					<li>
+						<MdSearch size={28} />
+						<span>Recherche</span>
+						</li>
+					<li>
+						<VscLibrary size={28} />
+						<span>Bibliothèque</span>
+						</li>
+						<br />
+					<li>
+						<TbSquarePlus size={28} />
+						<span>Créer une playlist</span>
+					</li>
+					<li>
+						<BiHeartSquare size={28} />
+						<span>Titres likés</span>
+					</li>
+				</ul>
+			</div>
+			<Playlists />
 		</Container>
 	);
 }
 
 const Container = styled.div`
 	background-color: black;
+	color: #b3b3b3;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+	.top__links {
+		display: flex;
+		flex-direction: column;
+		.logo {
+			text-align: center;
+			margin: 1rem 0;
+			img {
+				max-inline-size: 80%;
+				block-size: auto;
+			}
+		}
+		ul {
+			list-style-type: none;
+			display: flex;
+			flex-direction: column;
+			gap: 1rem;
+			padding: 1rem;
+			li {
+				display: flex;
+				align-items: center;
+				gap: 1rem;
+				cursor: pointer;
+				transition: 0.3s ease-in-out;
+				&:hover {
+					color: white;
+
+				}
+			}
+		}
+	}
 `
