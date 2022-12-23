@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from "styled-components";
 import {VscLibrary} from 'react-icons/vsc'
-import {TbSquarePlus} from 'react-icons/tb'
+import {BsPlusSquare} from 'react-icons/bs'
 import {BiHeartSquare} from 'react-icons/bi'
 import {MdHomeFilled, MdSearch} from 'react-icons/md'
 import Playlists from './Playlists';
@@ -31,7 +31,7 @@ export default function SideBar(){
 						</li>
 						<br />
 					<li>
-						<TbSquarePlus size={28} />
+						<BsPlusSquare size={28} />
 						<span>Créer une playlist</span>
 					</li>
 					<li>
